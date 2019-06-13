@@ -540,11 +540,6 @@ public class LayerValidatorImpl implements LayerValidator {
 					while (reSfcIter.hasNext()) {
 						SimpleFeature reSf = reSfcIter.next();
 
-						if (sf.getAttribute("osm_id").toString().equals("15475485")
-								&& reSf.getAttribute("osm_id").toString().equals("15474410")) {
-							System.out.println("");
-						}
-
 						if (sf.equals(reSf)) {
 							continue;
 						}
@@ -665,12 +660,10 @@ public class LayerValidatorImpl implements LayerValidator {
 		SimpleFeatureIterator simpleFeatureIterator = sfc.features();
 
 		while (simpleFeatureIterator.hasNext()) {
-
 			SimpleFeature simpleFeature = simpleFeatureIterator.next();
 			DTFeature feature = new DTFeature(layerID, simpleFeature, attrConditions);
 
 			for (DTLayer relationLayer : relationLayers) {
-
 				ErrorFeature errFeature = graphicValidator.validateEntityOpenMiss(feature, relationLayer, tole);
 				if (errFeature != null) {
 					errFeature.setLayerID(layerID);
@@ -680,7 +673,6 @@ public class LayerValidatorImpl implements LayerValidator {
 		}
 		simpleFeatureIterator.close();
 		if (errorLayer.getErrFeatureList().size() > 0) {
-
 			errorLayer.setLayerID(validatorLayer.getLayerID());
 			return errorLayer;
 		} else {

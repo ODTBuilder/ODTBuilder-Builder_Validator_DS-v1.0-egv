@@ -400,7 +400,6 @@ public class GeoserverServiceImpl extends EgovAbstractServiceImpl implements Geo
 							logger.warn("shp파일이 1개이상");
 							return 617;
 						}
-
 						if (prjIndex == 0) {
 							logger.warn("prj파일이 없음");
 							return 615;
