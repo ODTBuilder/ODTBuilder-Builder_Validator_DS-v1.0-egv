@@ -17,14 +17,14 @@ import com.git.gdsbuilder.geoserver.data.DTGeoserverManagerList;
 import com.git.qaproducer.controller.AbstractController;
 import com.git.qaproducer.user.domain.User;
 import com.git.qaproducer.user.domain.User.EnUserType;
-import com.git.qaproducer.user.service.UserService;
+import com.git.qaproducer.user.service.UserServiceImpl;
 
 @Controller
 @RequestMapping(value = "/user")
 public class UserController extends AbstractController {
 
 	@Resource(name = "userService")
-	UserService userService;
+	UserServiceImpl userService;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 

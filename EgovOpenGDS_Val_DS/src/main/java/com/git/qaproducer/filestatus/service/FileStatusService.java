@@ -1,47 +1,13 @@
 package com.git.qaproducer.filestatus.service;
 
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.git.qaproducer.filestatus.domain.FileStatus;
-import com.git.qaproducer.filestatus.repository.FileStatusRepository;
 
-import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+public interface FileStatusService {
+	public FileStatus retrieveFileStatusById(int fid);
 
-@Service("fileStatusService")
-@Transactional
-public class FileStatusService extends EgovAbstractServiceImpl {
+	public void createFileStatus(FileStatus fileStatus);
 
-	@Resource(name = "fileStatusRepository")
-	private FileStatusRepository fileStatusRepository;
+	public void updateFileStatus(FileStatus fileStatus);
 
-	@Transactional(readOnly = true)
-	public FileStatus retrieveFileStatusById(int fid) {
-		return fileStatusRepository.retrieveFileStatusById(fid);
-	}
-
-	@Transactional
-	public void createFileStatus(FileStatus fileStatus) {
-		fileStatusRepository.createFileStatus(fileStatus);
-	}
-
-	@Transactional
-	public void updateFileStatus(FileStatus fileStatus) {
-		fileStatusRepository.updateFileStatus(fileStatus);
-	}
-
-	@Transactional
-	public boolean deleteFileStatus(FileStatus fs) {
-		boolean flag = false;
-		try {
-			fileStatusRepository.deleteFileStatus(fs);
-			flag = true;
-		} catch (Exception e) {
-			// TODO: handle exception
-			System.out.println(e.getMessage());
-		}
-		return flag;
-	}
+	public boolean deleteFileStatus(FileStatus fs);
 }

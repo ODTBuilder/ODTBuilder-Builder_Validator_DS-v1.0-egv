@@ -7,8 +7,10 @@ import org.springframework.stereotype.Repository;
 import com.git.qaproducer.filestatus.domain.FileStatus;
 import com.git.qaproducer.filestatus.mapper.FileStatusMapper;
 
+import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
+
 @Repository("fileStatusRepository")
-public class FileStatusRepository {
+public class FileStatusRepository extends EgovAbstractMapper{
 
 	@Resource(name = "fileStatusMapper")
 	private FileStatusMapper fileStatusMapper;

@@ -189,7 +189,6 @@ gb.header.HeaderBase = function(obj) {
  * @param {Array.<Object.<string, string>>} list - header에 나열할 content list
  */
 gb.header.HeaderBase.prototype.createContent = function(list){
-	
 	var that = this;
 	
 	// target element에 header가 이미 존재한다면 header element 삭제
@@ -215,7 +214,7 @@ gb.header.HeaderBase.prototype.createContent = function(list){
 	this.headerTag = $("<header>").addClass("gb-headerbase-header");
 //	adjustStyle(this.headerTag, this.headerStyle);t
 	
-	this.ulTagLeft = $("<ul class='left-content'>").addClass("gb-headerbase-ul-lef");
+	this.ulTagLeft = $("<ul class='left-content'>").addClass("gb-headerbase-ul-left");
 //	adjustStyle(this.ulTagLeft, this.ulStyleLeft);
 	
 	this.ulTagRight = $("<ul class='right-conent'>").addClass("gb-headerbase-ul-right");

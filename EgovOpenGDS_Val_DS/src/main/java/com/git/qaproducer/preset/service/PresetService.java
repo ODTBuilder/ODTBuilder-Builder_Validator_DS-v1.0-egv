@@ -3,80 +3,30 @@ package com.git.qaproducer.preset.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.git.qaproducer.preset.domain.Preset;
-import com.git.qaproducer.preset.repository.PresetRepository;
 
-import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
+public interface PresetService {
+	public Preset retrieveBasePreset(int cat);
 
-@Service("presetService")
-@Transactional
-public class PresetService extends EgovAbstractServiceImpl {
+	public Preset retrievePridByBasePreset(int cat);
 
-	@Resource(name = "presetRepository")
-	private PresetRepository presetRepository;
+	public Preset retrievePresetById(int pid);
 
-	@Transactional(readOnly = true)
-	public Preset retrieveBasePreset(int cat) {
-		return presetRepository.retrieveBasePreset(cat);
-	}
+	public Preset retrieveCatByPreset(int pid);
 
-	@Transactional(readOnly = true)
-	public Preset retrievePridByBasePreset(int cat) {
-		return presetRepository.retrievePridByBasePreset(cat);
-	}
+	public List<Preset> retrievePresetByUidx(int uidx);
 
-	@Transactional(readOnly = true)
-	public Preset retrievePresetById(int pid) {
-		return presetRepository.retrievePresetById(pid);
-	}
+	public List<Preset> retrievePresetNamesByUidx(int uidx);
 
-	@Transactional(readOnly = true)
-	public Preset retrieveCatByPreset(int pid) {
-		return presetRepository.retrieveCatByPreset(pid);
-	}
+	public void createPreset(Preset preset);
 
-	@Transactional(readOnly = true)
-	public List<Preset> retrievePresetByUidx(int uidx) {
-		return presetRepository.retrievePresetByUidx(uidx);
-	}
+	public boolean updatePreset(Preset preset);
 
-	@Transactional(readOnly = true)
-	public List<Preset> retrievePresetNamesByUidx(int uidx) {
-		return presetRepository.retrievePresetNamesByUidx(uidx);
-	}
+	public boolean deletePresets(ArrayList<Preset> prList);
 
-	@Transactional
-	public void createPreset(Preset preset) {
-		presetRepository.createPreset(preset);
-	}
+	public Preset retrievePresetByIdAndUidx(Preset preset);
 
-	@Transactional
-	public boolean updatePreset(Preset preset) {
-		return presetRepository.updatePreset(preset);
-	}
+	public List<Preset> retrievePresetNameByNameAndUidx(Preset preset);
 
-	@Transactional
-	public boolean deletePresets(ArrayList<Preset> prList) {
-		return presetRepository.deletePresets(prList);
-	}
-
-	@Transactional
-	public Preset retrievePresetByIdAndUidx(Preset preset) {
-		return presetRepository.retrievePresetByIdAndUidx(preset);
-	}
-
-	@Transactional
-	public List<Preset> retrievePresetNameByNameAndUidx(Preset preset) {
-		return presetRepository.retrievePresetNamesByNameAndUidx(preset);
-	}
-
-	@Transactional
-	public List<Preset> retrievePresetNameByNameAndUidxAndPid(Preset preset) {
-		return presetRepository.retrievePresetNamesByNameAndUidxAndPid(preset);
-	}
+	public List<Preset> retrievePresetNameByNameAndUidxAndPid(Preset preset);
 }

@@ -11,8 +11,10 @@ import org.springframework.stereotype.Repository;
 import com.git.qaproducer.qa.domain.ValidationResult;
 import com.git.qaproducer.qa.mapper.ValidationResultMapper;
 
+import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
+
 @Repository("validationResultRepository")
-public class ValidationResultRepository {
+public class ValidationResultRepository extends EgovAbstractMapper{
 
 	@Resource(name = "validationResultMapper")
 	private ValidationResultMapper validationResultMapper;

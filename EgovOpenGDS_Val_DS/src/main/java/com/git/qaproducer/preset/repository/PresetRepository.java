@@ -10,8 +10,10 @@ import org.springframework.stereotype.Repository;
 import com.git.qaproducer.preset.domain.Preset;
 import com.git.qaproducer.preset.mapper.PresetMapper;
 
+import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
+
 @Repository("presetRepository")
-public class PresetRepository {
+public class PresetRepository extends EgovAbstractMapper{
 
 	@Resource(name = "presetMapper")
 	private PresetMapper presetMapper;

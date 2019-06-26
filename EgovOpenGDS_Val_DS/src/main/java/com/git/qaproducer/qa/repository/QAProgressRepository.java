@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 import com.git.qaproducer.qa.domain.QAProgress;
 import com.git.qaproducer.qa.mapper.QAProgressMapper;
 
+import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
+
 /**
  * tb_progress Repository 클래스.
  * 
@@ -17,7 +19,7 @@ import com.git.qaproducer.qa.mapper.QAProgressMapper;
  *
  */
 @Repository("qaProgressRepository")
-public class QAProgressRepository {
+public class QAProgressRepository extends EgovAbstractMapper{
 
 	@Resource(name = "qaProgressMapper")
 	private QAProgressMapper mapper;

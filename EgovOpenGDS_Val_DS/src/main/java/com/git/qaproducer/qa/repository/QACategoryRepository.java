@@ -10,8 +10,10 @@ import org.springframework.stereotype.Repository;
 import com.git.qaproducer.qa.domain.QACategory;
 import com.git.qaproducer.qa.mapper.QACategoryMapper;
 
+import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
+
 @Repository("qaCategoryRepository")
-public class QACategoryRepository {
+public class QACategoryRepository extends EgovAbstractMapper{
 
 	@Resource(name = "qaCategoryMapper")
 	private QACategoryMapper qaCategoryMapper;

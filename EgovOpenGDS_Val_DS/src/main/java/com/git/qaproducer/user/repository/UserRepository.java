@@ -13,8 +13,6 @@ import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
 
 @Repository("userRepository")
 public class UserRepository extends EgovAbstractMapper {
-
-		
 	@Resource(name="userMapper")
 	private UserMapper userMapper;
 	
