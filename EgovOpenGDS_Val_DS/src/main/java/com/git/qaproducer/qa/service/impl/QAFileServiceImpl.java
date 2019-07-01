@@ -69,13 +69,15 @@ import com.git.gdsbuilder.type.validate.error.ErrorLayer;
 import com.git.gdsbuilder.type.validate.layer.QALayerTypeList;
 import com.git.gdsbuilder.validator.collection.CollectionValidator;
 import com.git.qaproducer.filestatus.domain.FileStatus;
-import com.git.qaproducer.filestatus.service.impl.FileStatusServiceImpl;
+import com.git.qaproducer.filestatus.service.FileStatusService;
 import com.git.qaproducer.preset.domain.Preset;
-import com.git.qaproducer.preset.service.impl.PresetServiceImpl;
+import com.git.qaproducer.preset.service.PresetService;
 import com.git.qaproducer.qa.domain.QAProgress;
+import com.git.qaproducer.qa.service.QACategoryService;
 import com.git.qaproducer.qa.service.QAFileService;
+import com.git.qaproducer.qa.service.QAProgressService;
 import com.git.qaproducer.user.domain.User;
-import com.git.qaproducer.user.service.UserServiceImpl;
+import com.git.qaproducer.user.service.impl.UserService;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 
@@ -118,19 +120,19 @@ public class QAFileServiceImpl extends EgovAbstractServiceImpl implements QAFile
 	protected static int VALIDATEFAIL = 4;
 
 	@Resource(name = "fileStatusService")
-	private FileStatusServiceImpl fileStatusService;
+	private FileStatusService fileStatusService;
 
 	@Resource(name = "qaProgressService")
-	private QAProgressServiceImpl qapgService;
+	private QAProgressService qapgService;
 
 	@Resource(name = "userService")
-	UserServiceImpl userService;
+	private UserService userService;
 
 	@Resource(name = "qaCategoryService")
-	private QACategoryServiceImpl qaCatService;
+	private QACategoryService qaCatService;
 
 	@Resource(name = "presetService")
-	PresetServiceImpl presetService;
+	private PresetService presetService;
 
 	@SuppressWarnings("unchecked")
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
