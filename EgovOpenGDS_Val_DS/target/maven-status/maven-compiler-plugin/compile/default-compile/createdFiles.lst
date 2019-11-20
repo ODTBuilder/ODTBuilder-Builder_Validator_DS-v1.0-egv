@@ -5,7 +5,6 @@ com\git\gdsbuilder\validator\layer\LayerValidatorImpl$1ValidateULeaderlineResult
 com\git\gdsbuilder\geogig\type\GeogigLayerSimpleLog$SimpleCommit.class
 com\git\gdsbuilder\geogig\type\GeogigCat$FeatureType.class
 com\git\gdsbuilder\geogig\type\GeogigFeatureSimpleLog.class
-com\git\qaproducer\user\service\UserServiceImpl.class
 com\git\gdsbuilder\geogig\type\GeogigDelete.class
 com\git\gdsbuilder\geogig\type\GeogigTasks$RevTree.class
 com\git\qaproducer\geogig\service\GeogigLayerService.class
@@ -30,6 +29,7 @@ com\git\gdsbuilder\geogig\command\repository\LogRepository.class
 com\git\gdsbuilder\geogig\type\GeogigRepository.class
 com\git\gdsbuilder\geoserver\data\DTRESTDataStore.class
 com\git\gdsbuilder\geogig\type\GeogigRepositoryLog$Commit$ChangeType.class
+com\git\qaproducer\user\service\impl\UserServiceImpl.class
 com\git\gdsbuilder\parse\file\dxf\DXFFileLayerParser.class
 com\git\qaproducer\user\mapper\UserMapper.class
 com\git\qaproducer\qa\domain\ValidationResult.class
@@ -105,8 +105,8 @@ com\git\gdsbuilder\type\validate\option\type\UFMQAOptions.class
 com\git\qaproducer\qa\repository\ValidationResultRepository.class
 com\git\gdsbuilder\fileread\shp\SHPFileReader.class
 com\git\gdsbuilder\geoserver\converter\unzip\ForestUnzip.class
-com\git\qaproducer\user\service\impl\UserService.class
 com\git\qaproducer\geogig\service\impl\GeogigFeatureServiceImpl.class
+com\git\qaproducer\upload\service\impl\SHPFileUploadServiceImpl.class
 com\git\gdsbuilder\type\shp\layer\DTSHPLayerList.class
 com\git\qaproducer\user\repository\UserRepository.class
 com\git\gdsbuilder\parse\file\shp\SHPFileLayerParser.class
@@ -115,6 +115,7 @@ com\git\gdsbuilder\parse\file\ngi\NDAField.class
 com\git\gdsbuilder\geogig\GeogigCommandException.class
 com\git\qaproducer\qa\service\QAFileService.class
 com\git\qaproducer\qa\service\impl\QAWebServiceImpl.class
+com\git\qaproducer\user\service\UserService.class
 com\git\gdsbuilder\type\validate\error\ErrorLayer.class
 com\git\gdsbuilder\geogig\command\geoserver\GeoserverDataStore.class
 com\git\gdsbuilder\geolayer\data\DTGeoLayerList.class
@@ -291,6 +292,7 @@ com\git\gdsbuilder\geogig\type\GeogigRevisionTree.class
 com\git\gdsbuilder\geoserver\data\DTRESTDataStore$DBType.class
 com\git\gdsbuilder\validator\layer\LayerValidatorImpl$1ValidateUAvrgDPH20Result.class
 com\git\gdsbuilder\geogig\type\GeogigRepositoryInit$Repo.class
+com\git\qaproducer\upload\service\impl\FileUploadServiceImpl.class
 com\git\qaproducer\file\service\impl\DeleteFileServiceImpl.class
 com\git\gdsbuilder\geogig\command\repository\PullRepository.class
 com\git\gdsbuilder\geoserver\net\DTHTTPUtils.class

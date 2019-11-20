@@ -17,7 +17,7 @@ import com.git.gdsbuilder.geoserver.data.DTGeoserverManagerList;
 import com.git.qaproducer.controller.AbstractController;
 import com.git.qaproducer.user.domain.User;
 import com.git.qaproducer.user.domain.User.EnUserType;
-import com.git.qaproducer.user.service.impl.UserService;
+import com.git.qaproducer.user.service.UserService;
 
 @Controller
 @RequestMapping(value = "/user")

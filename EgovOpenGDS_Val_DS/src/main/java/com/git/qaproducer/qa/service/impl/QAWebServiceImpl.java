@@ -75,7 +75,7 @@ import com.git.qaproducer.preset.service.impl.PresetServiceImpl;
 import com.git.qaproducer.qa.domain.QAProgress;
 import com.git.qaproducer.qa.service.QAWebService;
 import com.git.qaproducer.user.domain.User;
-import com.git.qaproducer.user.service.UserServiceImpl;
+import com.git.qaproducer.user.service.impl.UserServiceImpl;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 

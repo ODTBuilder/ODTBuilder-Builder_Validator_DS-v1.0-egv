@@ -77,7 +77,7 @@ import com.git.qaproducer.qa.service.QACategoryService;
 import com.git.qaproducer.qa.service.QAFileService;
 import com.git.qaproducer.qa.service.QAProgressService;
 import com.git.qaproducer.user.domain.User;
-import com.git.qaproducer.user.service.impl.UserService;
+import com.git.qaproducer.user.service.UserService;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 
